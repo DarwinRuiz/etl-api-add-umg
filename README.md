@@ -14,31 +14,32 @@ This project is a RESTful API built with **Flask** that allows exporting data fr
 
 1. **Clone the repository**:
 
-   \`\`\`bash
+   ```bash
    git clone <REPOSITORY_URL>
    cd <REPOSITORY_NAME>
-   \`\`\`
+   ```
 
 2. **Create a virtual environment** (optional but recommended):
 
-   \`\`\`bash
+   ```bash
    python -m venv venv
-   source venv/bin/activate  # On Windows use \`venv\\\\Scripts\\\\activate\`
-   \`\`\`
+   source venv/bin/activate  
+   # On Windows use `venv\Scripts\activate`
+   ```
 
 3. **Install the dependencies**:
 
    You can install the dependencies using the `requirements.txt` file:
 
-   \`\`\`bash
+   ```bash
    pip install -r requirements.txt
-   \`\`\`
+   ```
 
    Alternatively, you can install them individually:
 
-   \`\`\`bash
+   ```bash
    pip install Flask pandas pyodbc
-   \`\`\`
+   ```
 
 4. **Install the ODBC Driver 17** for SQL Server. You can download it from [here](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server).
 
@@ -46,7 +47,7 @@ This project is a RESTful API built with **Flask** that allows exporting data fr
 
 The project contains the following folder structure:
 
-\`\`\`
+```
 <repository_name>/
 ├── src/
 │   ├── main.py
@@ -55,7 +56,7 @@ The project contains the following folder structure:
 │   ├── script_create_table.sql
 │   ├── script_insert_data.sql
 └── README.md
-\`\`\`
+```
 
 - **data/**: Folder that contains the necessary database scripts to create the table \`fact.Sales\`.
 
@@ -63,20 +64,20 @@ The project contains the following folder structure:
 
 Edit the \`main.py\` file to update the connection parameters for your database:
 
-\`\`\`python
+```python
 DB_SERVER = ''
 DB_NAME = ''
 DB_USERNAME = ''
 DB_PASSWORD = ''
-\`\`\`
+```
 
 ## 🚀 Usage
 
 To run the application, use the following command:
 
-\`\`\`bash
+```bash
 python src/main.py
-\`\`\`
+```
 
 The application will be available at \`http://127.0.0.1:5000\`.
 
@@ -88,7 +89,7 @@ The application will be available at \`http://127.0.0.1:5000\`.
 
 If the export is successful, the JSON file will have the following format:
 
-\`\`\`json
+```json
 [
     {
         "SalesID": 1,
@@ -101,17 +102,17 @@ If the export is successful, the JSON file will have the following format:
         "Amount": 150.00
     }
 ]
-\`\`\`
+```
 
 ## ⚠️ Errors
 
 If there is a problem creating the JSON file, an error message will be returned in JSON format:
 
-\`\`\`json
+```json
 {
     "error": "Error description"
 }
-\`\`\`
+```
 
 ---
 
@@ -131,31 +132,32 @@ Este proyecto es una API RESTful construida con **Flask** que permite exportar d
 
 1. **Clona el repositorio**:
 
-   \`\`\`bash
+   ```bash
    git clone <URL_DEL_REPOSITORIO>
    cd <NOMBRE_DEL_REPOSITORIO>
-   \`\`\`
+   ```
 
 2. **Crea un entorno virtual** (opcional pero recomendado):
 
-   \`\`\`bash
+   ```bash
    python -m venv venv
-   source venv/bin/activate  # En Windows usa \`venv\\\\Scripts\\\\activate\`
-   \`\`\`
+   source venv/bin/activate  
+   # En Windows usa `venv\Scripts\activate`
+   ```
 
 3. **Instala las dependencias**:
 
    Puedes instalar las dependencias usando el archivo `requirements.txt`:
 
-   \`\`\`bash
+   ```bash
    pip install -r requirements.txt
-   \`\`\`
+   ```
 
    Alternativamente, puedes instalarlas individualmente:
 
-   \`\`\`bash
+   ```bash
    pip install Flask pandas pyodbc
-   \`\`\`
+   ```
 
 4. **Instala el ODBC Driver 17** para SQL Server. Puedes descargarlo desde [aquí](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server).
 
@@ -163,7 +165,7 @@ Este proyecto es una API RESTful construida con **Flask** que permite exportar d
 
 El proyecto contiene la siguiente estructura de carpetas:
 
-\`\`\`
+```
 <nombre_del_repositorio>/
 ├── src/
 │   ├── main.py
@@ -172,7 +174,7 @@ El proyecto contiene la siguiente estructura de carpetas:
 │   ├── script_crear_tabla.sql
 │   ├── script_insertar_datos.sql
 └── README.md
-\`\`\`
+```
 
 - **data/**: Carpeta que contiene los scripts de base de datos necesarios para crear la tabla \`fact.Sales\`.
 
@@ -180,20 +182,20 @@ El proyecto contiene la siguiente estructura de carpetas:
 
 Edita el archivo \`main.py\` para actualizar los parámetros de conexión a tu base de datos:
 
-\`\`\`python
+```python
 DB_SERVER = ''
 DB_NAME = ''
 DB_USERNAME = ''
 DB_PASSWORD = ''
-\`\`\`
+```
 
 ## 🚀 Uso
 
 Para ejecutar la aplicación, utiliza el siguiente comando:
 
-\`\`\`bash
+```bash
 python src/main.py
-\`\`\`
+```
 
 La aplicación estará disponible en \`http://127.0.0.1:5000\`.
 
@@ -205,7 +207,7 @@ La aplicación estará disponible en \`http://127.0.0.1:5000\`.
 
 Si la exportación es exitosa, el archivo JSON tendrá el siguiente formato:
 
-\`\`\`json
+```json
 [
     {
         "SalesID": 1,
@@ -218,14 +220,14 @@ Si la exportación es exitosa, el archivo JSON tendrá el siguiente formato:
         "Amount": 150.00
     }
 ]
-\`\`\`
+```
 
 ## ⚠️ Errores
 
 Si hay un problema al crear el archivo JSON, se devolverá un mensaje de error en formato JSON:
 
-\`\`\`json
+```json
 {
     "error": "Descripción del error"
 }
-\`\`\`
+```
